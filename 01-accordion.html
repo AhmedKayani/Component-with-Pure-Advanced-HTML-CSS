@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion Component</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Green Colour: #087f5b */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        color: #343a40;
+      }
+
+      .accordion {
+        width: 700px;
+        margin: 100px auto;
+      }
+
+      .number,
+      .question,
+      .arrow-down {
+        color: #087f5b;
+        font-size: 24px;
+      }
+
+      .number,
+      .question {
+        font-weight: 500;
+      }
+
+      .accordion-ans-bullets {
+        margin-left: 16px;
+        color: #868e96;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .hidden {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="accordion">
+      <!-- Always visible part of the accordion -->
+      <h2 class="number">02</h2>
+      <h2 class="question">How long do I have to return my chair</h2>
+      <i class="fa-solid fa-chevron-down arrow-down"></i>
+
+      <!-- The answer which is made visible by user upon click -->
+      <div class="hidden">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero autem
+          officia hic corrupti nam quibusdam quo, praesentium natus ducimus,
+          labore aspernatur esse in eum tenetur voluptatibus deleniti. Ut, ullam
+          eius.
+        </p>
+        <ul class="accordion-ans-bullets">
+          <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Fuga possimus enim consequatur quidem voluptatem</li>
+          <li>id sint totam odit amet, excepturi quo.</li>
+          <li>Assumenda aliquid, quidem dolore placeat neque alias minus.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
