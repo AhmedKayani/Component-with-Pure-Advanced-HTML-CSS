@@ -24,19 +24,41 @@
 
       .accordion {
         width: 700px;
-        margin: 100px auto;
+        margin: 60px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .item {
+        padding: 22px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        justify-items: start;
+        column-gap: 24px;
+        row-gap: 14px;
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
       }
 
       .number,
       .question,
       .arrow-down {
-        color: #087f5b;
         font-size: 24px;
       }
 
       .number,
       .question {
         font-weight: 500;
+      }
+
+      .number {
+        color: #ced4da;
+      }
+
+      .arrow-down {
+        font-size: 22px;
       }
 
       .accordion-ans-bullets {
@@ -48,6 +70,22 @@
       }
 
       .hidden {
+        grid-column: 2;
+        display: none;
+      }
+
+      .open {
+        border-top: 5px solid #087f5b;
+      }
+
+      .open .number,
+      .open .question,
+      .open .arrow-down {
+        color: #087f5b;
+        stroke: #087f5b;
+      }
+
+      .open .hidden {
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -57,25 +95,71 @@
   </head>
   <body>
     <div class="accordion">
-      <!-- Always visible part of the accordion -->
-      <h2 class="number">02</h2>
-      <h2 class="question">How long do I have to return my chair</h2>
-      <i class="fa-solid fa-chevron-down arrow-down"></i>
+      <div class="item">
+        <!-- Always visible part of the accordion -->
+        <h2 class="number">01</h2>
+        <h2 class="question">Where are these chairs assembled</h2>
+        <i class="fa-solid fa-chevron-down arrow-down"></i>
 
-      <!-- The answer which is made visible by user upon click -->
-      <div class="hidden">
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero autem
-          officia hic corrupti nam quibusdam quo, praesentium natus ducimus,
-          labore aspernatur esse in eum tenetur voluptatibus deleniti. Ut, ullam
-          eius.
-        </p>
-        <ul class="accordion-ans-bullets">
-          <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-          <li>Fuga possimus enim consequatur quidem voluptatem</li>
-          <li>id sint totam odit amet, excepturi quo.</li>
-          <li>Assumenda aliquid, quidem dolore placeat neque alias minus.</li>
-        </ul>
+        <!-- The answer which is made visible by user upon click -->
+        <div class="hidden">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero
+            autem officia hic corrupti nam quibusdam quo, praesentium natus
+            ducimus, labore aspernatur esse in eum tenetur voluptatibus
+            deleniti. Ut, ullam eius.
+          </p>
+          <ul class="accordion-ans-bullets">
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Fuga possimus enim consequatur quidem voluptatem</li>
+            <li>id sint totam odit amet, excepturi quo.</li>
+            <li>Assumenda aliquid, quidem dolore placeat neque alias minus.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="item open">
+        <!-- Always visible part of the accordion -->
+        <h2 class="number">02</h2>
+        <h2 class="question">How long do I have to return my chair</h2>
+        <i class="fa-solid fa-chevron-down arrow-down"></i>
+
+        <!-- The answer which is made visible by user upon click -->
+        <div class="hidden">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero
+            autem officia hic corrupti nam quibusdam quo, praesentium natus
+            ducimus, labore aspernatur esse in eum tenetur voluptatibus
+            deleniti. Ut, ullam eius.
+          </p>
+          <ul class="accordion-ans-bullets">
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Fuga possimus enim consequatur quidem voluptatem</li>
+            <li>id sint totam odit amet, excepturi quo.</li>
+            <li>Assumenda aliquid, quidem dolore placeat neque alias minus.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="item">
+        <!-- Always visible part of the accordion -->
+        <h2 class="number">03</h2>
+        <h2 class="question">Do you ship to countries outside the EU?</h2>
+        <i class="fa-solid fa-chevron-down arrow-down"></i>
+
+        <!-- The answer which is made visible by user upon click -->
+        <div class="hidden">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero
+            autem officia hic corrupti nam quibusdam quo, praesentium natus
+            ducimus, labore aspernatur esse in eum tenetur voluptatibus
+            deleniti. Ut, ullam eius.
+          </p>
+          <ul class="accordion-ans-bullets">
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Fuga possimus enim consequatur quidem voluptatem</li>
+            <li>id sint totam odit amet, excepturi quo.</li>
+            <li>Assumenda aliquid, quidem dolore placeat neque alias minus.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </body>
