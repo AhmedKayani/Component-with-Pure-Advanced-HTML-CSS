@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel Component</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Green Colour: #087f5b */
+      /* Gray Colour: #343a40 */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        color: #fff;
+      }
+
+      .carousel {
+        width: 800px;
+        margin: 100px auto;
+        background-color: #087f5b;
+        padding: 32px;
+        padding-left: 108px;
+        padding-right: 72px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        gap: 86px;
+        position: relative;
+      }
+
+      .author-pic {
+        height: 200px;
+        transform: scale(1.6);
+        border-radius: 5px;
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.25);
+      }
+
+      .review {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 32px;
+        color: #e6fcf5;
+      }
+
+      .author-name {
+        margin-bottom: 4px;
+        font-size: 14px;
+        color: #c3fae0;
+      }
+
+      .author-role {
+        font-size: 12px;
+        color: #c3fae0;
+      }
+
+      .btn {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: none;
+        position: absolute;
+        background-color: #fff;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+        top: 50%;
+        cursor: pointer;
+      }
+
+      .btn-icon {
+        color: #087f5b;
+        font-size: 22px;
+      }
+
+      .btn--left {
+        left: 0;
+        transform: translate(-50%, -50%);
+      }
+
+      .btn--right {
+        right: 0;
+        transform: translate(50%, -50%);
+      }
+
+      .dots-container {
+        display: flex;
+        gap: 12px;
+        position: absolute;
+
+        bottom: 0;
+        left: 50%;
+
+        transform: translate(-50%, 40px);
+      }
+
+      .dot {
+        background-color: #fff;
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        border: 1.5px solid #087f5b;
+        cursor: pointer;
+      }
+
+      .dot--active {
+        background-color: #087f5b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <img
+        src="./Images/maria.jpg"
+        alt="Maria de Almeida Picture"
+        class="author-pic"
+      />
+      <blockquote>
+        <p class="review">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sunt
+          nihil ad, commodi optio quos officia voluptas aut nam quis excepturi
+          doloremque molestiae quidem nulla rerum dolores. Eaque, aperiam minus.
+        </p>
+        <p class="author-name">Maria de Almeida</p>
+        <p class="author-role">Senior Product Manager at EDP Comercial</p>
+      </blockquote>
+      <button class="btn btn--left">
+        <i class="fa fa-chevron-left btn-icon" aria-hidden="true"></i>
+      </button>
+      <button class="btn btn--right">
+        <i class="fa fa-chevron-right btn-icon" aria-hidden="true"></i>
+      </button>
+      <div class="dots-container">
+        <div class="dot">&nbsp;</div>
+        <div class="dot dot--active">&nbsp;</div>
+        <div class="dot">&nbsp;</div>
+        <div class="dot">&nbsp;</div>
+      </div>
+    </div>
+  </body>
+</html>
