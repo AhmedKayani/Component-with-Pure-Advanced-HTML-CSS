@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagination Component Challenge</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Green Colour: #087f5b */
+      /* Gray Colour: #343a40 */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        color: #343a40;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .pagination {
+        display: flex;
+        align-items: center;
+
+        gap: 20px;
+      }
+
+      button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 24px;
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        color: white;
+        background-color: #087f5b;
+      }
+
+      .icon-btn {
+        width: 52px;
+        height: 52px;
+        border: 2px solid #087f5b;
+        color: #087f5b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pagination">
+      <button class="icon-btn">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+      </button>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>...</button>
+      <button>23</button>
+      <button class="icon-btn">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </body>
+</html>
