@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>-name- Component</title>
+    <title>Table Component</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       rel="stylesheet"
@@ -21,6 +21,39 @@
       body {
         font-family: sans-serif;
         color: #343a40;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+
+      table {
+        width: 800px;
+        border-collapse: collapse;
+        font-size: 18px;
+      }
+
+      th {
+        text-align: left;
+      }
+
+      th,
+      td {
+        width: 25%;
+        padding: 16px;
+      }
+
+      thead th {
+        background-color: #087f5b;
+        color: #fff;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #f1f3f5;
+      }
+
+      tbody tr:nth-child(odd) {
+        background-color: #ced4da;
       }
     </style>
   </head>
@@ -40,6 +73,12 @@
           <td>80 cm</td>
           <td>60 cm</td>
           <td>220 cm</td>
+        </tr>
+        <tr>
+          <th>Height</th>
+          <td>100 cm</td>
+          <td>110 cm</td>
+          <td>90 cm</td>
         </tr>
         <tr>
           <th>Depth</th>
