@@ -44,39 +44,58 @@
 
       .container {
         margin: 0 auto;
-        width: 1200px;
+        width: 1080px;
       }
 
       header {
         height: 100vh;
-        display: flex;
-        gap: 96px;
-        flex-direction: column;
-        justify-content: flex-start;
         background-color: #c0c0c0;
+        color: #fff;
       }
 
       header nav {
-        align-self: flex-start;
-        padding: 16px 0;
+        padding-top: 32px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-size: 24px;
+        font-size: 16px;
         font-weight: 600;
+        text-transform: uppercase;
       }
 
-      header div {
-        align-self: center;
-        /* display: flex;
-        flex-direction: column; */
+      header {
+        position: relative;
+
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("./Images/hero.jpg");
+
+        /* Position and center the image to scale nicely on all screens */
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
 
-      header div {
+      header h1 {
+        font-size: 48px;
+      }
+
+      header p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .hero-content {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 12px;
+        gap: 24px;
+        width: 43%;
       }
 
       header div a {
@@ -105,7 +124,7 @@
     </style>
   </head>
   <body>
-    <header>
+    <!-- <header>
       <nav class="container">
         <div>Logo</div>
         <div>Navigation</div>
@@ -117,6 +136,22 @@
           healthy again. Tailored to your personal tastes and nutrition needs
         </p>
         <a href="#">Start eating well</a>
+      </div>
+    </header> -->
+    <header>
+      <div class="container">
+        <nav>
+          <div>Logo</div>
+          <div>Navigation</div>
+        </nav>
+        <div class="hero-content">
+          <h1>A healthy meal delivered to your door, every single day</h1>
+          <p>
+            The smart 365-days-per-year food subscription that will make you eat
+            healthy again. Tailored to your personal tastes and nutrition needs
+          </p>
+          <a href="#">Start eating well</a>
+        </div>
       </div>
     </header>
     <section class="container">
