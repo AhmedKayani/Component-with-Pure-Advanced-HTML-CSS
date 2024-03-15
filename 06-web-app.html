@@ -29,42 +29,41 @@
         color: #343a40;
       }
 
-      .container {
-        width: 1200px;
-        margin: 0 auto;
-      }
-
       section {
         height: 100vh;
         display: grid;
-        grid-template-rows: auto 1fr;
-        grid-template-columns: auto 1fr auto;
+        grid-template-rows: 60px 1fr;
+        grid-template-columns: 60px 280px 1fr 180px;
       }
 
-      header {
+      menu {
         background-image: linear-gradient(
           rgba(108, 15, 247, 0.6),
           rgba(108, 15, 247, 0.8)
         );
+        padding: 0 24px;
+
+        grid-column: 2 / -1;
+        grid-row: 1;
+      }
+
+      nav {
+        background-color: black;
+        color: #fff;
+        grid-row: 1 / -1;
+        grid-column: 1 / 2;
+        text-align: center;
         padding: 24px 0;
-
-        grid-column: 1 / -1;
       }
 
-      header div {
+      menu {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      header nav {
-        display: flex;
-        gap: 12px;
         justify-content: flex-start;
+        gap: 12px;
         align-items: center;
       }
 
-      header a {
+      menu a {
         text-decoration: none;
         padding: 6px 12px;
         background-color: rgba(108, 15, 247, 1);
@@ -72,64 +71,71 @@
         font-size: 18px;
       }
 
-      header button {
+      menu button {
         border: 0;
         background-color: rgba(244, 31, 31, 0.79);
         color: #fff;
         padding: 6px 12px;
         font-size: 18px;
         cursor: pointer;
+        margin-left: auto;
       }
 
       .email-div {
         background-color: rgba(167, 167, 167, 0.9);
-        grid-column: 1 / 2;
-        padding: 32px;
+        grid-column: 2 / 3;
+        padding: 18px 24px;
         display: flex;
         flex-direction: column;
         gap: 12px;
+        overflow: scroll;
       }
 
       .email-div div {
-        padding: 24px 104px;
+        padding: 24px;
+        text-align: center;
         background-color: rgba(112, 112, 112, 0.9);
         color: #343a40;
       }
 
       .view-div {
-        padding: 32px;
+        padding-top: 32px;
         margin: 0 auto;
+        grid-column: 3 / 4;
       }
 
       .info-div {
         background-color: rgba(167, 167, 167, 0.9);
         grid-column: 3;
-        padding: 32px;
+        padding: 32px 24px;
         display: flex;
         flex-direction: column;
         gap: 12px;
+        grid-column: 4;
       }
     </style>
   </head>
   <body>
     <section>
-      <header>
-        <div class="container">
-          <nav>
-            <a href="#">New</a>
-            <a href="#">Reply</a>
-            <a href="#">Forward</a>
-            <a href="#">Mark unread</a>
-          </nav>
-          <button>Trash</button>
-        </div>
-      </header>
+      <nav>Nav</nav>
+      <menu>
+        <a href="#">New</a>
+        <a href="#">Reply</a>
+        <a href="#">Forward</a>
+        <a href="#">Mark unread</a>
+
+        <button>Trash</button>
+      </menu>
       <div class="email-div">
         <div>Email 1</div>
         <div>Email 2</div>
         <div>Email 3</div>
         <div>Email 4</div>
         <div>Email 5</div>
+        <div>Email 6</div>
+        <div>Email 7</div>
+        <div>Email 8</div>
+        <div>Email 9</div>
       </div>
       <div class="view-div">
         <h3>Email View</h3>
